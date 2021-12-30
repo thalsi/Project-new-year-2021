@@ -141,7 +141,7 @@ friework(-540,-240,'green',20)
 friework(-570,-180,'red',20)
 
 crcks(-250,250,"#E5E4E2",15)#withe
-crcks(350,260,'#F70D1A',15) #red F70D1A
+crcks(350,260,'#FF6700',15) #red F70D1A
 crcks(50,300,"#8EEBEC",15)#bule 52D017
 
 def fier(postionX,PstionY,speed):

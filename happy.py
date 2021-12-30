@@ -7,10 +7,32 @@ screen.setup(width = 1.0, height = 1.0)
 # background color
 screen.bgcolor("black")
 
+def crcks(postionX,PstionY,color,type):
+    c = turtle.Turtle()
+    c.goto(postionX,PstionY)
+    c.speed(0)
+
+    for x in range(12):
+        c.color(color)
+        c.width(5)
+        c.penup()
+        c.forward(5)
+        c.pendown()
+        for i in range(13):
+            
+            c.forward(i-i+1)
+            c.penup()
+            c.backward(i+20+type)
+            c.pendown()
+            c.left(30)
+        c.hideturtle()
+
+
 def stars(postionX,PstionY,color,size):
     star = turtle.Turtle()
     star.goto(postionX,PstionY)
     star.speed(0)
+    star.pendown()
     star.width(3)
     # fire work head
     star.color(color)
@@ -20,18 +42,16 @@ def stars(postionX,PstionY,color,size):
         star.forward(size)
         star.right(144)
     star.end_fill()
+    star.penup()
     star.hideturtle()
 
-
-stars(-700,-200,'blue',10)
-stars(-700,-130,'red',10)
-stars(-630,-140,'blue',10)
 
 
 def friework(postionX,PstionY,color,rotation):
     b = turtle.Turtle()
     b.goto(postionX,PstionY)
     b.speed(0)
+    b.pendown()
     b.width(2)
     # fire work head
     b.color('white')
@@ -109,13 +129,20 @@ def friework(postionX,PstionY,color,rotation):
     b.forward(8)
     b.right(90)
     b.forward(300)
+    b.penup()
     b.hideturtle()
 
+stars(-700,-200,'blue',10)
+stars(-700,-130,'red',10)
+stars(-630,-140,'blue',10)
 
 friework(-650,-200,'blue',20)
 friework(-540,-240,'green',20)
 friework(-570,-180,'red',20)
 
+crcks(-250,250,"#E5E4E2",15)#withe
+crcks(350,260,'#F70D1A',15) #red F70D1A
+crcks(50,300,"#8EEBEC",15)#bule 52D017
 
 def fier(postionX,PstionY,speed):
     value=False
@@ -142,9 +169,11 @@ def fier(postionX,PstionY,speed):
                 a.right(30)
                 value=True
     a.hideturtle()
-fier(0,0,0)
-fier(-400, 200,0)
-fier(500, 200,0)
+
+
+# fier(0,0,0)
+# fier(-400, 200,0)
+# fier(500, 200,0)
 
 
 happy=turtle.Turtle()

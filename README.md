@@ -2,5 +2,5 @@
 
 - it is python Turtle graphics project. "Happy new year 2022" wrote in code.
 
-## Language
+## Technology
 - python
